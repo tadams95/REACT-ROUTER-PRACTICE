@@ -3,6 +3,7 @@ import AllQuotes from "./pages/AllQuotes";
 import NewQuote from "./pages/NewQuote";
 import QuoteDetail from "./pages/QuoteDetail";
 import Layout from "./components/layout/Layout";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -22,6 +23,11 @@ function App() {
 
         <Route path="/new-quote">
           <NewQuote />
+        </Route>
+
+        {/* wildcard path or the Not found page */}
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Layout>
