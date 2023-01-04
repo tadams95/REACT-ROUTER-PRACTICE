@@ -22,7 +22,7 @@ const QuoteDetail = () => {
   } = useHttp(getSingleQuote, true);
 
   useEffect(() => {
-    sendRequest();
+    sendRequest(quoteId);
   }, [sendRequest, quoteId]);
 
   if (status === "pending") {
